@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobillio Online Store</title>
+    <meta property="og:title" content="Mobillio Online Store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Jost;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: 0.02;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-navbar">
+          <header data-role="Header" class="home-header max-width-container">
+            <div class="home-navbar1">
+              <div class="home-container01"></div>
+              <div class="home-middle">
+                <div class="home-left">
+                  <a href="#aboutus" class="home-text navbar-link">ABOUT</a>
+                  <a href="#shop" class="home-text01 navbar-link">SHOP</a>
+                </div>
+                <a href="index.html" class="home-logo-center navbar-logo-title">
+                  HAPPY BOMBER
+                </a>
+                <div class="home-right">
+                  <a href="#blog" class="home-text02 navbar-link">BLOG</a>
+                  <a href="#contact" class="home-text03 navbar-link">CONTACT</a>
+                </div>
+              </div>
+            </div>
+            <div data-role="BurgerMenu" class="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+            <div data-role="MobileMenu" class="home-mobile-menu">
+              <div class="home-nav">
+                <div class="home-container02">
+                  <span class="home-logo-center1">MOBILLIO</span>
+                  <div
+                    data-role="CloseMobileMenu"
+                    class="home-close-mobile-menu"
+                  >
+                    <svg viewBox="0 0 1024 1024" class="home-icon02">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="home-middle1">
+                  <span class="home-text04">SHOP</span>
+                  <span class="home-text05">LOOKBOOK</span>
+                  <span class="home-text06">SPECIAL</span>
+                  <span class="home-text07">ABOUT</span>
+                  <span class="home-text08">BLOG</span>
+                  <span class="home-text09">CONTACT</span>
+                </div>
+              </div>
+              <div>
+                <svg viewBox="0 0 950.8571428571428 1024" class="home-icon04">
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg viewBox="0 0 877.7142857142857 1024" class="home-icon06">
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg viewBox="0 0 602.2582857142856 1024" class="home-icon08">
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="home-main">
+          <div class="home-hero section-container">
+            <div class="home-max-width max-width-container">
+              <div class="home-hero1">
+                <div class="home-container03">
+                  <div class="home-info">
+                    <img
+                      alt="Rectangle43271305"
+                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMicgaGVpZ2h0PSc1Micgdmlld0JveD0nMCAwIDIgNTInIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+CjxyZWN0IHdpZHRoPScyJyBoZWlnaHQ9JzUyJyBmaWxsPSdibGFjaycgZmlsbC1vcGFjaXR5PScwLjUnLz4KPC9zdmc+Cg=="
+                      class="home-image"
+                    />
+                    <span class="home-text10">
+                      <span>FIREWORKS</span>
+                      <br />
+                      <span>COLLECTION - 2024</span>
+                    </span>
+                  </div>
+                  <h1 class="home-text14 Heading-1">HAPPY BOOM 138 SHOT</h1>
+                  <div class="home-container04">
+                    <span class="home-text15">AT</span>
+                    <span class="home-text16">RM250</span>
+                  </div>
+                  <div class="home-btn-group">
+                    <a
+                      href="fireworks-collection.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link button"
+                    >
+                      Explore the collection
+                    </a>
+                  </div>
+                </div>
+                <img
+                  alt="image23271449"
+                  src="https://i.ibb.co/PgtfXbj/IMG-20231226-WA0010-removebg-preview.png"
+                  class="home-image1"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="aboutus" class="section-container column">
+            <div class="home-banner">
+              <div class="home-container05">
+                <h3 class="home-text17 Heading-3">HAPPY BOOMER</h3>
+                <span class="home-text18">FIREWORKS &amp; FIRECRACKERS</span>
+              </div>
+            </div>
+            <div id="aboutus" class="home-container06 max-width-container">
+              <div class="home-container07">
+                <span class="home-text19">
+                  Welcome to Happy Boomer, your one-stop-shop for all your
+                  firecracker and fireworks needs. We are a reseller of legal
+                  fireworks in Malaysia, particularly Happy Boom and Pop Pop
+                  related products, sourced from wholesalers. Our products are
+                  of high quality and are sure to bring joy and excitement to
+                  your celebrations. We take pride in providing our customers
+                  with safe and legal fireworks that comply with all
+                  regulations. Shop with us and experience the thrill of
+                  fireworks without any worries. We also deliver to Malacca,
+                  Melaka, Negeri Sembilan, Pahang, Pulau Pinang, Selangor,
+                  Terengganu, Perlis, Kedah, Perak, Selatan, Terengganu.
+                </span>
+                <img
+                  alt="M3271427"
+                  src="https://pnglib.nyc3.cdn.digitaloceanspaces.com/uploads/2020/10/alphabet-h-background_5f7b4729bc8ff.png"
+                  class="home-svg"
+                />
+                <a
+                  href="https://t.me/happyboomershop_bot"
+                  class="home-link01 button"
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="shop" class="section-container home-trending-items">
+            <div class="max-width-container">
+              <div class="section-heading-section-heading">
+                <h1 class="section-heading-text Heading-2">
+                  <span>TRENDING ITEMS</span>
+                </h1>
+                <span class="section-heading-text1">
+                  <span>
+                    Explore our monthly most trending products, new items and
+                    the best Happy Boomer offers you can buy
+                  </span>
+                </span>
+              </div>
+              <div class="home-gallery">
+                <div class="home-left1">
+                  <a href="fireworks-collection.html" class="home-link02">
+                    <div
+                      class="item-card-gallery-card item-card-root-class-name4"
+                    >
+                      <img
+                        alt="image"
+                        src="https://i.ibb.co/tBs1MnV/IMG-20231226-WA0015.jpg"
+                        class="item-card-image"
+                      />
+                      <div class="item-card-container">
+                        <h3 class="item-card-text">
+                          <span>
+                            Happy Boom Assorted Celebration Cake 4"49 Shot
+                          </span>
+                        </h3>
+                        <div class="item-card-container1">
+                          <svg viewBox="0 0 1024 1024" class="item-card-icon">
+                            <path
+                              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 1024 1024"
+                            class="item-card-icon02"
+                          >
+                            <path
+                              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 1024 1024"
+                            class="item-card-icon04"
+                          >
+                            <path
+                              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 1024 1024"
+                            class="item-card-icon06"
+                          >
+                            <path
+                              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 1024 1024"
+                            class="item-card-icon08"
+                          >
+                            <path
+                              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="item-card-container2">
+                          <span class="item-card-currency">
+                            <span>RM</span>
+                          </span>
+                          <span class="item-card-value"><span>105</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="home-right1">
+                  <div class="home-top">
+                    <div class="home-left2">
+                      <a href="ground-collection.html" class="home-link03">
+                        <div
+                          class="item-card-gallery-card item-card-root-class-name2"
+                        >
+                          <img
+                            alt="image"
+                            src="https://i.ibb.co/ZxgBgYR/IMG-20231226-WA0001.jpg"
+                            class="item-card-image"
+                          />
+                          <div class="item-card-container">
+                            <h3 class="item-card-text">
+                              <span>Gasing Bunga</span>
+                            </h3>
+                            <div class="item-card-container1">
+                              <svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon02"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon04"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon06"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon08"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="item-card-container2">
+                              <span class="item-card-currency">
+                                <span>RM</span>
+                              </span>
+                              <span class="item-card-value">
+                                <span>38</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="home-right2">
+                      <a href="ground-collection.html" class="home-link04">
+                        <div
+                          class="item-card-gallery-card item-card-root-class-name3"
+                        >
+                          <img
+                            alt="image"
+                            src="https://i.ibb.co/zPZSZsB/IMG-20231226-WA0012.jpg"
+                            class="item-card-image"
+                          />
+                          <div class="item-card-container">
+                            <h3 class="item-card-text">
+                              <span>Pili Crackers</span>
+                            </h3>
+                            <div class="item-card-container1">
+                              <svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon02"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon04"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon06"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon08"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="item-card-container2">
+                              <span class="item-card-currency">
+                                <span>RM</span>
+                              </span>
+                              <span class="item-card-value">
+                                <span>42</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-bottom">
+                    <div class="home-left3">
+                      <a href="ground-collection.html" class="home-link05">
+                        <div
+                          class="item-card-gallery-card item-card-root-class-name1"
+                        >
+                          <img
+                            alt="image"
+                            src="https://i.ibb.co/W3tL7Br/IMG-20231226-WA0004.jpg"
+                            class="item-card-image"
+                          />
+                          <div class="item-card-container">
+                            <h3 class="item-card-text">
+                              <span>Bola Jumbo</span>
+                            </h3>
+                            <div class="item-card-container1">
+                              <svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon02"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon04"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon06"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon08"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="item-card-container2">
+                              <span class="item-card-currency">
+                                <span>RM</span>
+                              </span>
+                              <span class="item-card-value">
+                                <span>55</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="home-right3">
+                      <a
+                        href="handheld-collection.html"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link06"
+                      >
+                        <div
+                          class="item-card-gallery-card item-card-root-class-name6"
+                        >
+                          <img
+                            alt="image"
+                            src="https://i.ibb.co/nnpgdSK/IMG-20231226-WA0006.jpg"
+                            class="item-card-image"
+                          />
+                          <div class="item-card-container">
+                            <h3 class="item-card-text">
+                              <span>196 Roman</span>
+                            </h3>
+                            <div class="item-card-container1">
+                              <svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon02"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon04"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon06"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path></svg
+                              ><svg
+                                viewBox="0 0 1024 1024"
+                                class="item-card-icon08"
+                              >
+                                <path
+                                  d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="item-card-container2">
+                              <span class="item-card-currency">
+                                <span>RM</span>
+                              </span>
+                              <span class="item-card-value">
+                                <span>70</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-category-card">
+            <div class="home-categories1">
+              <div class="home-max-width2 max-width-container">
+                <div class="section-heading-section-heading">
+                  <h1 class="section-heading-text Heading-2">
+                    <span>SHOP BY CATEGORIES</span>
+                  </h1>
+                  <span class="section-heading-text1">
+                    <span>
+                      Start shopping based on the categories you are interested
+                      in
+                    </span>
+                  </span>
+                </div>
+                <div class="home-cards-container">
+                  <a
+                    href="fireworks-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link07"
+                  >
+                    <div class="home-container08">
+                      <img
+                        alt="image"
+                        src="https://i.ibb.co/6sFFchG/IMG-20231226-WA0015-removebg-preview.png"
+                        class="home-image2"
+                      />
+                      <span class="home-text20">
+                        <span>Fireworks</span>
+                        <br />
+                      </span>
+                    </div>
+                  </a>
+                  <a
+                    href="handheld-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link08"
+                  >
+                    <div class="home-container09">
+                      <img
+                        alt="image"
+                        src="https://i.ibb.co/J7tVgfZ/IMG-20231226-WA0009-removebg-preview.png"
+                        class="home-image3"
+                      />
+                      <span class="home-text23">Handheld</span>
+                    </div>
+                  </a>
+                  <a
+                    href="ground-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link09"
+                  >
+                    <div class="home-container10">
+                      <img
+                        alt="image"
+                        src="https://i.ibb.co/C270KDG/IMG-20231226-WA0001-removebg-preview.png"
+                        class="home-image4"
+                      />
+                      <span class="home-text24">Ground Spinners</span>
+                    </div>
+                  </a>
+                  <a
+                    href="firecrackers-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link10"
+                  >
+                    <div class="home-container11">
+                      <img
+                        alt="image"
+                        src="https://i.ibb.co/KhXwsh3/IMG-20231226-WA0013-removebg-preview.png"
+                        class="home-image5"
+                      />
+                      <span class="home-text25">Fire Crackers</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="blog" class="section-container home-blog">
+            <div class="max-width-container home-max-width3">
+              <div
+                class="section-heading-section-heading section-heading-root-class-name"
+              >
+                <h1 class="section-heading-text Heading-2">
+                  <span>Our blog</span>
+                </h1>
+                <span class="section-heading-text1">
+                  <span>
+                    Read the latest news and Happy Boom/Pop Pop related articles
+                  </span>
+                </span>
+              </div>
+              <div class="home-container12">
+                <a
+                  href="blog-1.html"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link11"
+                ></a>
+                <div
+                  class="blog-post-card-blog-post-card blog-post-card-root-class-name"
+                >
+                  <a
+                    href="blog-1.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link11"
+                  >
+                    <img
+                      alt="image"
+                      src="https://pbs.twimg.com/media/FQTnW8GaQAEFdvq.jpg:large"
+                      class="blog-post-card-image"
+                    />
+                  </a>
+                  <div class="blog-post-card-container">
+                    <a
+                      href="blog-1.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link11"
+                    >
+                      <span class="blog-post-card-text">
+                        <span>Types of Happy Boom Fireworks</span>
+                      </span>
+                      <span class="blog-post-card-text1">
+                        <span>
+                          Happy Boom is a popular brand of fireworks and
+                          firecrackers in Malaysia ...
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="/blog-1"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="button"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="contact" class="home-footer">
+          <div class="max-width-container home-max-width4">
+            <footer class="home-footer1">
+              <div class="home-container13">
+                <h3 class="home-text26 Heading-3">HAPPY BOMBER</h3>
+                <span class="home-text27">
+                  <span>Business Hours:&nbsp;</span>
+                  <br />
+                  <span>MON - SUN 8 AM TO 12 PM</span>
+                  <br />
+                </span>
+                <div class="home-container14">
+                  <a
+                    href="https://t.me/happyboomershop_bot"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link12"
+                  >
+                    <img
+                      alt="image"
+                      src="https://imgs.search.brave.com/mqK9rf7SuF0bn81kHzGoChWRywqXQ6OllVMZEkHW6jQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy84/LzgyL1RlbGVncmFt/X2xvZ28uc3Zn.svg"
+                      class="home-image6"
+                    />
+                  </a>
+                </div>
+                <span class="home-text32">contact@happybomber.shop</span>
+              </div>
+              <div class="home-links-container">
+                <div class="home-container15">
+                  <span class="home-text33">Categories</span>
+                  <a
+                    href="fireworks-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link13"
+                  >
+                    Fireworks
+                  </a>
+                  <a
+                    href="handheld-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link14"
+                  >
+                    Handheld
+                  </a>
+                  <a
+                    href="ground-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link15"
+                  >
+                    Ground Spinners
+                  </a>
+                  <a
+                    href="firecrackers-collection.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link16"
+                  >
+                    Fire Crackers
+                  </a>
+                </div>
+                <div class="home-container16">
+                  <span class="home-text34">Company</span>
+                  <a href="#shop" class="home-link17">Shop</a>
+                  <a href="#aboutus" class="home-link18">About</a>
+                  <a href="#blog" class="home-link19">Blog</a>
+                </div>
+                <div class="home-container17">
+                  <span class="home-text35">Resources</span>
+                  <a
+                    href="https://t.me/happyboomershop_bot"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link20"
+                  >
+                    Contact us
+                  </a>
+                  <a
+                    href="https://t.me/happyboomershop_bot"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link21"
+                  >
+                    Order
+                  </a>
+                  <a
+                    href="https://t.me/happyboomershop_bot"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link22"
+                  >
+                    Track your order
+                  </a>
+                  <a
+                    href="https://t.me/happyboomershop_bot"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link23"
+                  >
+                    Shipping &amp; Delivery
+                  </a>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>
